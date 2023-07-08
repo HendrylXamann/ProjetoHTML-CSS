@@ -1,0 +1,124 @@
+<!DOCTYPE html>   
+<html>
+<head>
+		<meta charset="utf-8" /> <!-- definindo a língua -->
+		<title>Página 1</title>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css"> <!-- linkando a pagina css -->
+		
+</head>
+	<body
+			onLoad = "window.alert(
+	
+								'Olá, \n'+
+								'Você está acessando uma página que oferece produtos e serviços voltados para o público cuja língua materna é o portugês (Brasileiro).'
+							  		)"
+																				> <!--FECHAMENTO DE BODY --> <!-- mensagem inicial que aparece na tela ao abrir -->
+<div id="topo" align="center">
+				<center><h1> H.Renascitur</h1> <h2>Cursos e traduções</h2> </center>
+			
+</div>
+		<nav>
+			<a href="pagina3.html"target="_blank">Quem somos</a>
+			<a href="pagina 2.html">Cursos e serviços</a>
+			<a href="pagina 4.html">Lucros</a>
+		</nav>
+
+			
+
+<!-- Daqui pra baixo é sobre os slides -->	
+<div class="slideshow-container">  
+
+  				<!-- Primeira imagem do slide -->
+  				<div class="mySlides fade"> 
+    			<div class="numbertext">1 / 4</div>
+    			<img src="img/jp.jpeg" style="width:100%">
+    			<div class="text">Japão</div>
+				</div> <!--fechamento da fade -->
+ 				<!-- Segunda imagem do slide -->
+  				<div class="mySlides fade">
+    			<div class="numbertext">2 / 4</div>
+    			<img src="img/german.jpeg" style="width:100%">
+   				<div class="text">Alemanha</div>
+ 	 			</div> <!--fechamento da fade -->
+ 				<!-- Terceira imagem do slide -->
+  				<div class="mySlides fade">
+    			<div class="numbertext">3 / 4</div>
+    			<img src="img/brasil.jpeg" style="width:100%">
+   				<div class="text">Brasil</div>
+ 				</div><!--fechamento da fade -->
+  				<!-- Quarta imagem do slide -->
+  				<div class="mySlides fade">
+    			<div class="numbertext">4 / 4</div>
+    			<img src="pat.jpeg" style="width:100%">
+    			<div class="text">Patrocinador</div>
+  				</div>
+
+ <!-- função pra passar a imagem manualmente -->
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+
+			
+  <div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+
+<script>      /* delimitando as funções, aqui fica as condicionais necessarias para o slide funcionar de fato */
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+		
+		
+				<!-- Imagens usadas -->
+				<div id= "divImagem" align="center"> 
+				<a href="pagina3.html"><img src="img/jp.jpeg" width="350" height="200" align="center"class="media-object  img-responsive img-thumbnail"></a>
+				<a href="pagina3.html"><img src="img/german.jpeg" width="350" height="200" align="center"class="media-object  img-responsive img-thumbnail"></a>
+				<a href="pagina3.html"><img src="img/brasil.jpeg" width="350" height="200" align="center"class="media-object  img-responsive img-thumbnail"></a>
+				</div>
+				
+				
+			
+		
+		
+<footer>
+<div id="rodape">
+				<div id="t_rodape">
+					<P>H.Renascitur</P>
+				</div>
+					
+				
+			
+</div>
+</footer>
+
+</body>
+</html>
